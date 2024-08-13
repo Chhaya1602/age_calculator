@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        .container{
+            border: 4px;
+            text-align: center;
+            border-radius: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: blueviolet;
+        }
+        #dob{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 20px;
+            font-family: sans-serif;
+        }
+        button{
+            background-color: lightcoral;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        #para{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculate Your Age</h2>
+        <input type="date" id="dob"> <br><br>
+        <button onclick="calculateAge ()">Calculate Your Age</button>
+        <p id="para">Enter Your Age</p>
+    </div>
+    <script>
+
+    const calculateAge = () =>{
+        const today = new Date ()
+        const birthYear = new
+        Date(document.getElementById('dob').value)
+
+        const currentAge = today.getFullYear() - birthYear.getFullYear()
+
+        document.querySelector('#para').innerHTML = `Your Current Age is ${currentAge}`
+    }
+    </script>
+</body>
+</html>
